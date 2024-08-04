@@ -24,7 +24,7 @@ function App() {
 
     return (
         <BasketProvider>
-            <Router>
+            <Router basename="/foodie">
                 <div className="App">
                     <Navbar />
                     <Switch>
