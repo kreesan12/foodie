@@ -1,0 +1,13 @@
+.orders {
+    padding: 20px;
+}
+
+    .orders ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    .orders li {
+        border-bottom: 1px solid #ddd;
+        padding: 10px 0;
+    }

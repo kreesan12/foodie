@@ -1,0 +1,60 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 10px 20px;
+}
+
+.navbar-logo {
+    display: flex;
+    align-items: center;
+}
+
+    .navbar-logo img {
+        height: 40px;
+        margin-right: 10px;
+    }
+
+.navbar-title {
+    color: black;
+    font-size: 1.5rem;
+}
+
+.navbar-links a {
+    color: black;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.navbar-actions {
+    display: flex;
+    align-items: center;
+}
+
+.sign-in-btn {
+    background-color: white;
+    color: black;
+    padding: 10px;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+.basket-icon {
+    display: flex;
+    align-items: center;
+    margin-left: 2px;
+    cursor: pointer;
+}
+
+    .basket-icon img {
+        height: 30px;
+    }
+
+.basket-count {
+    background-color: white;
+    color: black;
+    border-radius: 50%;
+    padding: 5px 10px;
+    margin-right: 15px;
+}

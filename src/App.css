@@ -1,0 +1,126 @@
+/* General styles for the application */
+.App {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Navbar Styles */
+.App .navbar {
+    background-color: white;
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width:100%;
+    position: fixed;
+    z-index: 1000; /* Ensure it sits above other elements */
+}
+
+/* Carousel Styles */
+.App .carousel {
+    background-color: white;
+    height: 200px; /* Adjust as needed */
+    padding-top:40px;
+}
+
+/* Main Content Area */
+.App .content {
+    flex: 1; /* Take up remaining space */
+    padding: 20px;
+    background-color: #ffffff;
+}
+
+/* Footer Styles */
+.App .footer {
+    background-color: white;
+    color: black;
+    text-align: center;
+    padding: 10px;
+}
+    .footer a {
+        margin: 0 10px;
+        text-decoration: none;
+        color: black;
+    }
+
+/* Menu Grid */
+.menu-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.menu-item {
+    flex: 1 1 calc(33.333% - 20px); /* Adjust grid item size */
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #fff;
+    transition: box-shadow 0.3s;
+}
+
+/*generic button style*/
+.ios-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 12px;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    background-color: white; /* iOS blue color */
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+    outline: none; /* Remove outline on focus */
+}
+
+    .ios-button:hover {
+        background-color: seagreen;
+    }
+
+.ios-button-select {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 12px;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+    outline: none; /* Remove outline on focus */
+    background-color: seagreen;
+}
+
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .menu-grid {
+        flex-direction: column;
+    }
+
+    .menu-item {
+        flex: 1 1 100%;
+    }
+}
