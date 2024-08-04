@@ -81,7 +81,7 @@ function Checkout() {
             deliveryAddress: formValues,
         };
 
-        fetch('https://fathomless-retreat-07632-66acd80d626f.herokuapp.com/api/orders', {
+       /* fetch('https://fathomless-retreat-07632-66acd80d626f.herokuapp.com/api/orders', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -97,7 +97,43 @@ function Checkout() {
                 setOrderStatus('Failed to place order. Please try again.');
                 console.error('Error placing order:', err);
             });
-    };
+    };*/
+
+
+    if (!orderDetails) {
+        console.error('Order details are undefined or null.');
+        setOrderStatus('Failed to place order. Order details are missing.');
+    } else {
+        fetch('https://fathomless-retreat-07632-66acd80d626f.herokuapp.com/api/orders', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(orderDetails)
+        })
+            .then((res) => {
+                if (!res.ok) {
+                    // Handle HTTP errors
+                    throw new Error(`HTTP error! status: ${res.status}`);
+                }
+                return res.json();
+            })
+            .then((data) => {
+                setOrderStatus('Order placed successfully!');
+                console.log('Order placed:', data);
+            })
+            .catch((err) => {
+                // Enhanced error handling
+                if (err.name === 'TypeError') {
+                    setOrderStatus('Failed to place order. Network error or API not reachable.');
+                } else if (err.name === 'SyntaxError') {
+                    setOrderStatus('Failed to place order. Invalid response from server.');
+                } else {
+                    setOrderStatus('Failed to place order. Please try again.');
+                }
+                console.error('Error placing order:', err);
+            });
+    }
 
     const handleAddMoreItems = () => {
         history.push('/');
