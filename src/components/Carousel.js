@@ -4,9 +4,9 @@ import './Carousel.css';
 function Carousel() {
     const [currentSlide, setCurrentSlide] = useState(0);
     const slides = [
-        { image: '/carousel-image1.png', link: '/menu-item1' },
-        { image: '/carousel-image2.png', link: '/menu-item2' },
-        { image: '/carousel-image3.png', link: '/menu-item3' },
+        { image: '/carousel-image1.jpeg', link: '/menu-item1' },
+        { image: '/carousel-image2.jpeg', link: '/menu-item2' },
+        { image: '/carousel-image3.jpeg', link: '/menu-item3' },
     ];
 
     useEffect(() => {
