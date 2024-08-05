@@ -81,7 +81,7 @@ function Checkout() {
             deliveryAddress: formValues,
         };
 
-       /* fetch('https://fathomless-retreat-07632-66acd80d626f.herokuapp.com/api/orders', {
+     /* fetch('https://fathomless-retreat-07632-66acd80d626f.herokuapp.com/api/orders', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
