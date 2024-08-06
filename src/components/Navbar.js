@@ -4,7 +4,6 @@ import { BasketContext } from '../contexts/BasketContext';
 import './Navbar.css';
 
 function Navbar() {
-
     const { total } = useContext(BasketContext);
 
     return (
@@ -19,7 +18,7 @@ function Navbar() {
                 <Link to="/about-us">About Us</Link>
                 <Link to="/contact-us">Contact Us</Link>
             </div>
-                <div className="navbar-actions">
+            <div className="navbar-actions">
                 <button className="sign-in-btn ios-button">Sign In</button>
                 <div className="basket-icon">
                     <Link to="/checkout">
@@ -28,7 +27,6 @@ function Navbar() {
                 </div>
                 <div className="basket-icon">
                     <Link to="/checkout">
-                        {/*<img src="/basket-icon.png" alt="Basket" />*/}
                         <span className="basket-count">Basket: R{total}</span>
                     </Link>
                 </div>
