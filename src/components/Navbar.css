@@ -21,11 +21,16 @@
     font-size: 1.5rem;
 }
 
-.navbar-links a {
-    color: black;
-    margin: 0 10px;
-    text-decoration: none;
+.navbar-links {
+    display: flex;
+    align-items: center;
 }
+
+    .navbar-links a {
+        color: black;
+        margin: 0 10px;
+        text-decoration: none;
+    }
 
 .navbar-actions {
     display: flex;
@@ -57,4 +62,28 @@
     border-radius: 50%;
     padding: 5px 10px;
     margin-right: 15px;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .navbar-links {
+        display: none;
+    }
+
+    .navbar {
+        padding: 10px;
+    }
+
+    .navbar-logo img {
+        height: 30px;
+        margin-right: 5px;
+    }
+
+    .navbar-title {
+        font-size: 1.2rem;
+    }
+
+    .navbar-actions {
+        flex-direction: row;
+    }
 }

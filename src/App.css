@@ -5,45 +5,46 @@
     min-height: 100vh;
 }
 
-/* Navbar Styles */
-.App .navbar {
-    background-color: white;
-    color: white;
-    padding: 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width:100%;
-    position: fixed;
-    z-index: 1000; /* Ensure it sits above other elements */
-}
-
-/* Carousel Styles */
-.App .carousel {
-    background-color: white;
-    height: 200px; /* Adjust as needed */
-    padding-top:40px;
-}
-
-/* Main Content Area */
-.App .content {
-    flex: 1; /* Take up remaining space */
-    padding: 20px;
-    background-color: #ffffff;
-}
-
-/* Footer Styles */
-.App .footer {
-    background-color: white;
-    color: black;
-    text-align: center;
-    padding: 10px;
-}
-    .footer a {
-        margin: 0 10px;
-        text-decoration: none;
-        color: black;
+    /* Navbar Styles */
+    .App .navbar {
+        background-color: white;
+        color: white;
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        position: fixed;
+        z-index: 1000; /* Ensure it sits above other elements */
     }
+
+    /* Carousel Styles */
+    .App .carousel {
+        background-color: white;
+        height: 200px; /* Adjust as needed */
+        padding-top: 40px;
+    }
+
+    /* Main Content Area */
+    .App .content {
+        flex: 1; /* Take up remaining space */
+        padding: 20px;
+        background-color: #ffffff;
+    }
+
+    /* Footer Styles */
+    .App .footer {
+        background-color: white;
+        color: black;
+        text-align: center;
+        padding: 10px;
+    }
+
+.footer a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: black;
+}
 
 /* Menu Grid */
 .menu-grid {
@@ -103,7 +104,6 @@
     background-color: seagreen;
 }
 
-
 /* Mobile Styles */
 @media (max-width: 768px) {
     .nav {
@@ -118,9 +118,12 @@
 
     .menu-grid {
         flex-direction: column;
+        gap: 10px;
+        padding: 10px;
     }
 
     .menu-item {
         flex: 1 1 100%;
+        width: 100%;
     }
 }
