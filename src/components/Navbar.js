@@ -9,8 +9,12 @@ function Navbar() {
     return (
         <nav className="navbar">
             <div className="navbar-logo">
+                <div>
+                <Link to="/">Home>
                 <img src={process.env.PUBLIC_URL + '/logo.png'} alt="Logo" />
                 <span className="navbar-title">Divineveg on 262</span>
+                </Link>
+                </div>
             </div>
             <div className="navbar-links">
                 <Link to="/">Home</Link>
