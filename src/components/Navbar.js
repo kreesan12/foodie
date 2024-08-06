@@ -9,7 +9,7 @@ function Navbar() {
     return (
         <nav className="navbar">
             <div className="navbar-logo">
-                <img src="/logo.png" alt="Logo" />
+                <img src= {process.env.PUBLIC_URL + '/logo.png'} alt="Logo" />
                 <span className="navbar-title">Divineveg on 262</span>
             </div>
             <div className="navbar-links">
