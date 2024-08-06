@@ -11,13 +11,15 @@
     .checkout .basket-summary {
         margin-bottom: 20px;
         display: flex;
+        flex: 1;
         flex-direction: column;
-        align-items: flex-end; /* Align items to the right */
     }
 
     /* Basket Item */
     .checkout .basket-item {
         display: flex;
+        flex-wrap:wrap;
+        flex-direction: row;
         align-items: center;
         margin-bottom: 10px;
         border: 1px solid #ddd;
