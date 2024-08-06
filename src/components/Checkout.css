@@ -160,16 +160,33 @@
 
 /* Mobile Styles */
 @media (max-width: 768px) {
-    .checkout form {
+    .checkout {
         padding: 10px;
     }
 
-    .checkout .basket-item {
-        flex-direction: column;
-        align-items: flex-start;
-    }
+        .checkout .basket-item {
+            flex-direction: column;
+            align-items: flex-start;
+        }
 
-    .checkout .item-image {
-        margin-bottom: 10px;
-    }
+        .checkout .item-image {
+            margin-bottom: 10px;
+        }
+
+        .checkout .item-details {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .checkout .quantity-controls {
+            margin-top: 10px;
+        }
+
+        .checkout .align-right {
+            align-items: center;
+        }
+
+        .checkout .total-value {
+            text-align: center;
+        }
 }
