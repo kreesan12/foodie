@@ -24,6 +24,16 @@
     text-align: center;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
     animation: slide-down 0.5s ease-in-out;
+    margin: 0 20px; /* Default margin for small padding on desktop */
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .modal-content {
+        width: calc(100% - 40px); /* Ensure padding on mobile */
+        max-width: none; /* Allow full width usage on smaller screens */
+        margin: 20px; /* Ensure padding on all sides */
+    }
 }
 
 /* Variant Options */
