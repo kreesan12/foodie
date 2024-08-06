@@ -9,7 +9,7 @@ function Navbar() {
     return (
         <nav className="navbar">
             <div className="navbar-logo">
-                <img src= {process.env.PUBLIC_URL + '/logo.png'} alt="Logo" />
+                <img src={process.env.PUBLIC_URL + '/logo.png'} alt="Logo" />
                 <span className="navbar-title">Divineveg on 262</span>
             </div>
             <div className="navbar-links">
@@ -22,7 +22,7 @@ function Navbar() {
                 <button className="sign-in-btn ios-button">Sign In</button>
                 <div className="basket-icon">
                     <Link to="/checkout">
-                        <img src="/basket-icon.png" alt="Basket" />
+                        <img src={process.env.PUBLIC_URL + '/basket-icon.png'} alt="Basket" />
                     </Link>
                 </div>
                 <div className="basket-icon">
