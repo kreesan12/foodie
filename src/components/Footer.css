@@ -1,11 +1,45 @@
 .footer {
-    padding-bottom: 20px;
+    padding: 20px 0; /* Add top and bottom padding for better spacing */
     text-align: center;
-    background-color:white;
-
+    background-color: white;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Add subtle shadow for depth */
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: auto; /* Ensures the footer sticks to the bottom */
 }
 
-.footer-social-links a {
-    margin: 0 10px;
-    text-decoration: none;
+.footer-social-links {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+    .footer-social-links a {
+        margin: 0 10px;
+        text-decoration: none;
+        color: black; /* Ensure the icons/links are visible */
+        font-size: 1.2em; /* Increase icon size */
+        transition: color 0.3s ease; /* Smooth color transition */
+    }
+
+        .footer-social-links a:hover {
+            color: seagreen; /* Change color on hover */
+        }
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .footer {
+        padding: 15px 0;
+    }
+
+    .footer-social-links {
+        flex-direction: column; /* Stack icons vertically on small screens */
+        gap: 10px;
+    }
+
+        .footer-social-links a {
+            font-size: 1.5em; /* Increase icon size for better visibility on mobile */
+            margin: 5px 0; /* Adjust spacing */
+        }
 }

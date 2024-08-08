@@ -28,7 +28,7 @@
     /* Main Content Area */
     .App .content {
         flex: 1; /* Take up remaining space */
-        padding: 20px;
+        padding: 0px;
         background-color: #ffffff;
     }
 
@@ -50,9 +50,9 @@
 .menu-grid {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 0px;
     justify-content: center;
-    padding: 20px;
+    padding: 0px;
 }
 
 .menu-item {
