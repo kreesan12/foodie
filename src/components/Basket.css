@@ -1,13 +1,15 @@
+/* Default (Desktop) Styles */
 .basket {
     position: fixed;
-    top: 70px;
+    top: 70px; /* Original position for desktop screens */
     right: 10px;
     background-color: white;
     padding: 20px;
     border: 1px solid #ddd;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align:center;
+    text-align: center;
+    z-index: 1000;
 }
 
     .basket ul {
@@ -18,3 +20,15 @@
     .basket li {
         margin-bottom: 10px;
     }
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .basket {
+        top: auto; /* Remove top positioning */
+        right: auto; /* Remove right positioning */
+        bottom: 10px; /* Position at the bottom */
+        left: 10px; /* Add left padding */
+        right: 10px; /* Add right padding */
+        padding: 15px; /* Slightly smaller padding for mobile */
+    }
+}
