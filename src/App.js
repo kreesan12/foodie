@@ -4,6 +4,7 @@ import Navbar from './components/Navbar';
 import Carousel from './components/Carousel';
 import Menu from './components/Menu';
 import Basket from './components/Basket';
+import FrontPageBasket from './components/FrontPageBasket';
 import Checkout from './components/Checkout';
 import Orders from './components/Orders';
 import AboutUs from './components/AboutUs';
@@ -37,7 +38,7 @@ function App() {
                         <Route path="/about-us" component={AboutUs} />
                         <Route path="/contact-us" component={ContactUs} />
                     </Switch>
-                    <Basket /> 
+                    <FrontPageBasket /> 
                     <Footer />
                 </div>
             </Router>

@@ -1,0 +1,28 @@
+.frontpagebasket {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    cursor: pointer; /* Make it clear that the basket is clickable */
+    transition: background-color 0.3s ease;
+}
+
+    .frontpagebasket:hover {
+        background-color: #f9f9f9; /* Subtle background change on hover */
+    }
+
+.frontpagebasket-summary {
+    display: flex;
+    justify-content: space-between;
+}
+
+    .frontpagebasketbasket-summary p {
+        margin: 0;
+        font-weight: bold;
+    }

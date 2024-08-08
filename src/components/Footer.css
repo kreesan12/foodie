@@ -34,7 +34,7 @@
     }
 
     .footer-social-links {
-        flex-direction: column; /* Stack icons vertically on small screens */
+        flex-direction: row; /* Stack icons vertically on small screens */
         gap: 10px;
         font-size:50%;
     }
