@@ -33,21 +33,72 @@ function Menu() {
         }
     };
 
+    const scrollToSection = (sectionId) => {
+        const section = document.getElementById(sectionId);
+        if (section) {
+            section.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
+
+    const categorizedItems = {
+        fastFood: menuItems.filter(item => item.category === 'fast food'),
+        mainMeals: menuItems.filter(item => item.category === 'main meals'),
+        desserts: menuItems.filter(item => item.category === 'desserts'),
+        sides: menuItems.filter(item => item.category === 'sides')
+    };
+
     return (
-        <div className="menu">
-            {menuItems.map((item) => (
-                <div key={item.id} className="menu-item">
-                    <div className="menu-item-info">
-                        <h3>{item.name}</h3>
-                        <p>{item.description}</p>
-                        <p>R {item.price}</p>
-                        <button className="ios-button" onClick={() => handleAddToBasket(item)}>Add to Basket</button>
+        <div className="menu-container">
+            <div className="section-selector">
+                <button onClick={() => scrollToSection('fast-food')}>Fast Food</button>
+                <button onClick={() => scrollToSection('main-meals')}>Main Meals</button>
+                <button onClick={() => scrollToSection('desserts')}>Desserts</button>
+                <button onClick={() => scrollToSection('sides')}>Sides</button>
+            </div>
+
+            <div className="menu" id="fast-food">
+                <h2>Fast Food</h2>
+                {categorizedItems.fastFood.map((item) => (
+                    <div key={item.id} className="menu-item">
+                        <div className="menu-item-info">
+                            <h3>{item.name}</h3>
+                            <p>{item.description}</p>
+                            <p>R {item.price}</p>
+                            <button className="ios-button" onClick={() => handleAddToBasket(item)}>Add to Basket</button>
+                        </div>
+                        <div className="menu-item-image">
+                            <img src={item.image} alt={item.name} />
+                        </div>
                     </div>
-                    <div className="menu-item-image">
-                        <img src={item.image} alt={item.name} />
+                ))}
+            </div>
+
+            <div className="menu" id="main-meals">
+                <h2>Main Meals</h2>
+                {categorizedItems.mainMeals.map((item) => (
+                    <div key={item.id} className="menu-item">
+                        {/* Repeat the menu item layout */}
                     </div>
-                </div>
-            ))}
+                ))}
+            </div>
+
+            <div className="menu" id="desserts">
+                <h2>Desserts</h2>
+                {categorizedItems.desserts.map((item) => (
+                    <div key={item.id} className="menu-item">
+                        {/* Repeat the menu item layout */}
+                    </div>
+                ))}
+            </div>
+
+            <div className="menu" id="sides">
+                <h2>Sides</h2>
+                {categorizedItems.sides.map((item) => (
+                    <div key={item.id} className="menu-item">
+                        {/* Repeat the menu item layout */}
+                    </div>
+                ))}
+            </div>
 
             {selectedItem && (
                 <div className="modal-overlay">

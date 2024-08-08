@@ -1,0 +1,23 @@
+.section-selector {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+    padding: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+    .section-selector button {
+        margin: 0 10px;
+        padding: 10px 20px;
+        background-color: #6E6E6D;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+
+        .section-selector button:hover {
+            background-color: seagreen;
+        }
