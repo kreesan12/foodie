@@ -31,7 +31,7 @@ function App() {
                     <Switch>
                         <Route path="/" exact>
                             <Carousel />
-                            <SectionSelector />
+                            {/*<SectionSelector />*/}
                             <Menu />
                             {basket.length > 0 && <FrontPageBasket />} {/* Show only if items in basket */}
                         </Route>

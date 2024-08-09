@@ -2,6 +2,7 @@ import React, { useEffect, useState, useContext } from 'react';
 import { BasketContext } from '../contexts/BasketContext';
 import './Menu.css';
 import './Modal.css'; // Import the Modal CSS
+import SectionSelector from './SectionSelector'; // Import the SectionSelector component
 
 function Menu() {
     const [menuItems, setMenuItems] = useState([]);
@@ -33,13 +34,6 @@ function Menu() {
         }
     };
 
-    const scrollToSection = (sectionId) => {
-        const section = document.getElementById(sectionId);
-        if (section) {
-            section.scrollIntoView({ behavior: 'smooth' });
-        }
-    };
-
     const categorizedItems = {
         fastFood: menuItems.filter(item => item.category === 'fast food'),
         mainMeals: menuItems.filter(item => item.category === 'main meals'),
@@ -65,12 +59,7 @@ function Menu() {
 
     return (
         <div className="menu-container">
-            <div className="section-selector">
-                <button onClick={() => scrollToSection('fast-food')}>Fast Food</button>
-                <button onClick={() => scrollToSection('main-meals')}>Main Meals</button>
-                <button onClick={() => scrollToSection('desserts')}>Desserts</button>
-                <button onClick={() => scrollToSection('sides')}>Sides</button>
-            </div>
+            <SectionSelector /> {/* Add the SectionSelector component here */}
 
             <div className="menu" id="fast-food">
                 <h2>Fast Food</h2>
