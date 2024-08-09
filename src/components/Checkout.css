@@ -17,8 +17,7 @@
     /* Basket Item */
     .checkout .basket-item {
         display: flex;
-        flex-wrap:wrap;
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
         margin-bottom: 10px;
         border: 1px solid #ddd;
@@ -28,6 +27,13 @@
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     }
 
+.new {
+    display:flex;
+    flex-direction:column;
+    align-content:center;
+    align-items:center;
+}
+
     /* Item Image */
     .checkout .item-image img {
         width: 100px; /* Consistent sizing */
@@ -35,20 +41,25 @@
         object-fit: cover;
         margin-right: 10px;
         border-radius: 8px; /* Match menu item style */
+        display:flex;
+        flex-direction:row;
     }
 
     /* Item Details */
-    .checkout .item-details {
-        flex: 1;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
+.checkout .item-detail {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+}
 
     /* Quantity Controls */
     .checkout .quantity-controls {
         display: flex;
+        flex-direction:row;
         align-items: center;
+        justify-items:center;
+
     }
 
         .checkout .quantity-controls button {

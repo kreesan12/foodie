@@ -109,17 +109,22 @@ function Checkout() {
             <div className="basket-summary">
                 {basket.map((item, index) => (
                     <div key={index} className="basket-item">
-                        <div className="item-image">
-                            <img src={item.image} alt={item.name} />
-                        </div>
-                        <div className="item-details">
-                            <p>{item.name} - {item.variant.name} - {item.variant.price} ZAR</p>
+
+                        <div className="item-detail">
+                            <div className="item-image">
+                                <img src={item.image} alt={item.name} />
+                            </div>
+                                <p>{item.name} - {item.variant.name} - {item.variant.price} ZAR</p>
+                            <div className="new">
                             <div className="quantity-controls">
                                 <button onClick={() => handleQuantityChange(index, -1)}>-</button>
                                 <span>{item.quantity}</span>
-                                <button onClick={() => handleQuantityChange(index, 1)}>+</button>
-                                <button onClick={() => handleRemoveItem(index)}>Remove</button>
+                                <button onClick={() => handleQuantityChange(index, 1)}>+</button>           
                             </div>
+                            <div className="quantity-controls">
+                            <button onClick={() => handleRemoveItem(index)}>Remove</button>
+                                </div>
+                                </div>
                         </div>
                     </div>
                 ))}
